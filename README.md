@@ -1,10 +1,6 @@
 <html>
-<head>
-  <title>Meu Portfólio</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
+  <title>Meu Portfólio</title>
   <h1>Olá, eu sou Conception</h1>
   <p>Desenvolvedor de jogos e sistemas Roblox.</p>
 </body>
