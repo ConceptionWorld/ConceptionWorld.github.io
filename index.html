@@ -1,169 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meu Site Pessoal</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #16161d;
-    }
-
-    header {
-      background: #333;
-      color: white;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    nav button {
-      background: #444;
-      color: #fdfdfd;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    nav button:hover {
-      background: #555;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-      background: #2D2D33;
-      margin-top: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .more-button {
-      margin-top: 20px;
-      display: inline-block;
-      background: #0066ff;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-    }
-
-    .switch-container {
-      position: relative;
-      display: flex;
-      width: 200px;
-      background: #C5C5C7;
-      border-radius: 30px;
-      overflow: hidden;
-      margin: 40px auto;
-    }
-
-    .switch-container input[type="radio"] {
-      display: none;
-    }
-
-    .switch-container label {
-      flex: 1;
-      text-align: center;
-      padding: 10px 0;
-      cursor: pointer;
-      z-index: 1;
-      position: relative;
-      font-weight: bold;
-    }
-
-    .switch-indicator {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background: #3A6170;
-      border-radius: 30px;
-      transition: left 0.3s ease;
-    }
-
-    #pro:checked ~ .switch-indicator {
-      left: 50%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldLink: Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-  <header>
-    <nav>
-      <button onclick="scrollToSection('historia')">História</button>
-      <button onclick="scrollToSection('projetos')">Projetos</button>
-      <button onclick="scrollToSection('ideias')">Ideias Futuras</button>
-      <button onclick="scrollToSection('contato')">Contato</button>
+    <nav class="navbar">
+        <a href="#" class="logo">WorldLink</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Future Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <div class="switch-container">
-    <input type="radio" id="free" name="plan" checked>
-    <label for="free">Free</label>
-
-    <input type="radio" id="pro" name="plan">
-    <label for="pro">Pro</label>
-
-    <div class="switch-indicator"></div>
-  </div>
-
-  <section id="historia">
-    <h2>Minha História</h2>
-    <p>Desde pequeno, sempre fui curioso por tecnologia e criação...</p>
-    <a href="#" class="more-button">Saber mais sobre minha história</a>
-  </section>
-
-  <section id="projetos">
-    <h2>Meus Projetos</h2>
-    <p>Comecei criando jogos simples no Roblox e evoluí para projetos mais complexos...</p>
-    <a href="#" class="more-button">Saber mais sobre os projetos</a>
-  </section>
-
-  <section id="ideias">
-    <h2>Ideias Futuras</h2>
-    <p>Tenho planos para desenvolver experiências interativas únicas...</p>
-    <a href="#" class="more-button">Saber mais sobre os desenvolvimentos</a>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Email: seuemail@email.com</p>
-    <p>GitHub: <a href="https://github.com/seuusuario" target="_blank">github.com/seuusuario</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Seu Nome. Todos os direitos reservados.
-  </footer>
-
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+    <section class="home">
+        <div class="home-info">
+            <h1>Big ass</h1>
+            <h2>Big coke</h2>
+            <p>KAOPWDKAOPWDKOPAWKDOPAWKDOPAWKOPDKAWOPDKOPAWKDOPAWKDOPAWKOPDA
+                akopwdkaopwdkopawkdopwakopdkwaopdkopwa</p>
+            <div class="btn-sci">
+                <a href="#" class="btn">DIck</a>
+                <div class="sci">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
+
 </html>
