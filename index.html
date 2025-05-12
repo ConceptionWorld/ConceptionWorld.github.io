@@ -69,6 +69,46 @@
       padding: 30px;
       color: #777;
     }
+
+    /* ===== SWITCH STYLES ===== */
+    .switch-container {
+      position: relative;
+      display: flex;
+      width: 200px;
+      background: #e0e0e0;
+      border-radius: 30px;
+      overflow: hidden;
+      margin: 40px auto;
+    }
+
+    .switch-container input[type="radio"] {
+      display: none;
+    }
+
+    .switch-container label {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      cursor: pointer;
+      z-index: 1;
+      position: relative;
+      font-weight: bold;
+    }
+
+    .switch-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: #0066ff;
+      border-radius: 30px;
+      transition: left 0.3s ease;
+    }
+
+    #pro:checked ~ .switch-indicator {
+      left: 50%;
+    }
   </style>
 </head>
 <body>
@@ -81,6 +121,17 @@
       <button onclick="scrollToSection('contato')">Contato</button>
     </nav>
   </header>
+
+  <!-- SWITCH COM ANIMAÇÃO -->
+  <div class="switch-container">
+    <input type="radio" id="free" name="plan" checked>
+    <label for="free">Free</label>
+
+    <input type="radio" id="pro" name="plan">
+    <label for="pro">Pro</label>
+
+    <div class="switch-indicator"></div>
+  </div>
 
   <section id="historia">
     <h2>Minha História</h2>
