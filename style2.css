@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f051d, #18054c);
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+  }
+  
+  .navbar nav a {
+    margin: 0 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s;
+  }
+  
+  .navbar nav a:hover {
+    color: #fff;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    min-height: 90vh;
+    background: url('https://assets.codepen.io/605876/stars-bg.svg') no-repeat center/cover;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #d96bff, #60cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #ccc;
+  }
+  
+  .hero-buttons button {
+    margin-right: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .primary-btn {
+    background: linear-gradient(to right, #6e00ff, #b300ff);
+    color: white;
+  }
+  
+  .secondary-btn {
+    background: transparent;
+    border: 1px solid #b300ff;
+    color: #b300ff;
+  }
+  
+  .hero-image img {
+    width: 500px;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content, .hero-image {
+      max-width: 100%;
+    }
+  
+    .hero-image img {
+      width: 300px;
+    }
+  }  
