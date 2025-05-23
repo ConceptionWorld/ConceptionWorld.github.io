@@ -23,7 +23,7 @@
   }
   
   .navbar .logo {
-    font-family: 'Fira Code', sans-serif;
+    font-family: 'Fira Code', monospace;
     font-size: 1.6rem;
     color: #fff;
   }
