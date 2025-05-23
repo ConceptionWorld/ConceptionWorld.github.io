@@ -24,7 +24,7 @@
   
   .navbar .logo {
     font-family: 'Fira Code', monospace;
-    font-size: 3.6rem;
+    font-size: 2rem;
     color: #fff;
   }
   
@@ -57,10 +57,10 @@
     font-size: 3.5rem;
     background: linear-gradient(to right, #d96bff, #60cfff);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    box-shadow: 0 4px 20px #9d9dff;
-    text-shadow: 0 0 1px #d96bff, 0 0 10px #9d9dff, 0 0 10px #60cfff;
+    text-shadow: 0 0 1px #d96bff, 0 0 10px rgb(157, 157, 255), 0 0 10px #60cfff;
   }
   
   .hero-content p {
