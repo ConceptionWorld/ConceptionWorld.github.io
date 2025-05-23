@@ -23,7 +23,7 @@
   }
   
   .navbar .logo {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Fira Code', sans-serif;
     font-size: 1.6rem;
     color: #fff;
   }
@@ -56,6 +56,7 @@
   .hero-content h1 {
     font-size: 3.5rem;
     background: linear-gradient(to right, #d96bff, #60cfff);
+    text-shadow: 0 0 1px #b100f7, 0 0 10px #3700ff, 0 0 10px #00f8ec;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
