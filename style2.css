@@ -54,7 +54,7 @@
   .hero-content h1 {
     font-size: 3.5rem;
     background: linear-gradient(to right, #d96bff, #60cfff);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
   }
