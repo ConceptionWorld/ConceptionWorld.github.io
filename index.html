@@ -1,71 +1,71 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conception | Portfolio</title>
-  <meta name="description" content="Conception's Portfolio — Projects, Articles & Contacts." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #fbfcff; --card: #111827; --muted: #94a3b8; --text: #acc5f8; --brand: #22d3ee; --accent:#8b5cf6;
-      --ring: 0 0 0 3px rgba(34,211,238,.25);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 800px at 80% -10%,rgba(139,92,246,.15),transparent),radial-gradient(900px 600px at -10% 10%,rgba(34,211,238,.15),transparent),var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-    .logo{font-weight:800;letter-spacing:.3px}
-    nav a{margin-left:16px;color:var(--muted)}
-    nav a:hover{color:var(--text)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:48px 0}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid #1f2937;border-radius:999px;color:var(--muted);font-size:12px}
-    .title{font-size:clamp(28px,6vw,56px);line-height:1.1;margin:12px 0 16px}
-    .subtitle{color:var(--muted);font-size:18px}
-    .cta{display:flex;gap:12px;margin-top:24px}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid #1f2937;background:#0f172a;color:#a9c6ff}
-    .btn:hover{box-shadow:var(--ring)}
-    .btn.primary{background: linear-gradient(135deg, var(--brand), var(--accent)); border: none; color: #0b1220;}
-    .btn.ghost{background:transparent}
-    .card{background:linear-gradient(180deg,#0b1220, #0b1220), var(--card);border:1px solid #1f2937;border-radius:16px;padding:18px}
-    .grid{display:grid;gap:16px}
-    .grid.projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .kpi{padding:14px;border:1px dashed #334155;border-radius:12px;color:var(--muted)}
-    section{padding:12px 0 28px}
-    h2{font-size:22px;margin:0 0 12px}
-    .project h3{margin:8px 0 4px;font-size:18px}
-    .project p{margin:0;color:var(--muted);font-size:14px}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{font-size:12px; color:#0b1220; background: rgba(93,172,195,.15); border: 1px solid rgba(93,172,195,.35); padding:4px 8px; border-radius:999px;}
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;font-weight:800;color:#0b1220}
-    .list{margin:0;padding-left:18px;color:var(--muted)}
-    footer{padding:24px 0;color:var(--muted);border-top:1px solid #1f2937;margin-top:24px}
-    .social{display:flex;gap:12px}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#0b1220;border:1px solid #1f2937;color:var(--muted)}
-    .contact{display:grid;grid-template-columns:1fr .8fr;gap:16px;align-items:start}
-    input,textarea{width:100%;padding:12px 14px;background:#0b1220;border:1px solid #1f2937;border-radius:12px;color:var(--text)}
-    label{font-size:12px;color:var(--muted)}
-    form .row{display:grid;gap:10px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.about,.contact{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conception | Portfólio</title>
+<meta name="description" content="Portfólio de Conception — projetos, artigos e contatos." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg: #ffffff; --card: #ffffff; --muted: #64748b; --text: #0b1220; --brand: #5dacc3; --accent: #2a7f96;
+--ring: 0 0 0 3px rgba(93,172,195,.35);
+}
+*{box-sizing:border-box}
+html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 800px at 80% -10%,rgba(93,172,195,.35),transparent),radial-gradient(900px 600px at -10% 10%,rgba(255,255,255,.12),transparent),var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{font-weight:800;letter-spacing:.3px}
+nav a{margin-left:16px;color:var(--muted)}
+nav a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:48px 0}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--brand);border-radius:999px;color:var(--text);font-size:12px;background:#ffffff}
+.title{font-size:clamp(28px,6vw,56px);line-height:1.1;margin:12px 0 16px}
+.subtitle{color:var(--muted);font-size:18px}
+.cta{display:flex;gap:12px;margin-top:24px}
+.btn{padding:12px 16px;border-radius:12px;border:1px solid var(--brand);background:#ffffff;color:var(--brand)}
+.btn:hover{box-shadow:var(--ring)}
+.btn.primary{background:var(--brand);border:1px solid var(--brand);color:#ffffff;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+.card{background:var(--card);border:1px solid var(--brand);border-radius:16px;padding:18px}
+.grid{display:grid;gap:16px}
+.grid.projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.kpi{padding:14px;border:1px dashed var(--brand);border-radius:12px;color:var(--muted)}
+section{padding:12px 0 28px}
+h2{font-size:22px;margin:0 0 12px}
+.project h3{margin:8px 0 4px;font-size:18px}
+.project p{margin:0;color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tag{font-size:12px;color:#0b1220;background:rgba(93,172,195,.15);border:1px solid rgba(93,172,195,.25);padding:4px 8px;border-radius:999px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;font-weight:800;color:#0b1220}
+.list{margin:0;padding-left:18px;color:var(--muted)}
+footer{padding:24px 0;color:var(--muted);border-top:1px solid var(--brand);margin-top:24px}
+.social{display:flex;gap:12px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#ffffff;border:1px solid var(--brand);color:var(--brand)}
+.contact{display:grid;grid-template-columns:1fr .8fr;gap:16px;align-items:start}
+input,textarea{width:100%;padding:12px 14px;background:#ffffff;border:1px solid var(--brand);border-radius:12px;color:var(--text)}
+label{font-size:12px;color:var(--muted)}
+form .row{display:grid;gap:10px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.about,.contact{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">CW<span style="color:var(--brand)">•</span>Portfolio</div>
-      <nav>
-        <a href="#projetos">Projects</a>
-        <a href="#sobre">About</a>
-        <a href="#contato">Contacts</a>
-      </nav>
-    </header>
+<div class="container">
+<header>
+<div class="logo">CW<span style="color:var(--brand)">•</span>Portfolio</div>
+<nav>
+<a href="#projetos">Projetos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
 
     <section class="hero">
       <div>
@@ -170,13 +170,16 @@
       </div>
     </section>
 
+
+
     <footer>
       © <span id="year"></span> Conception_World — Feito com HTML/CSS puro e hospedado no GitHub Pages.
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear()
-  </script>
-</body>
-</html>
+      </footer>
+      </div>
+      
+      
+      <script>
+      document.getElementById('year').textContent = new Date().getFullYear()
+      </script>
+      </body>
+      </html>
