@@ -1,185 +1,314 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Conception | Portfólio</title>
-<meta name="description" content="Portfólio de Conception — projetos, artigos e contatos." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
---bg: #ffffff; --card: #ffffff; --muted: #64748b; --text: #0b1220; --brand: #5dacc3; --accent: #2a7f96;
---ring: 0 0 0 3px rgba(93,172,195,.35);
-}
-*{box-sizing:border-box}
-html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 800px at 80% -10%,rgba(93,172,195,.35),transparent),radial-gradient(900px 600px at -10% 10%,rgba(255,255,255,.12),transparent),var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-.logo{font-weight:800;letter-spacing:.3px}
-nav a{margin-left:16px;color:var(--muted)}
-nav a:hover{color:var(--text)}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:48px 0}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--brand);border-radius:999px;color:var(--text);font-size:12px;background:#ffffff}
-.title{font-size:clamp(28px,6vw,56px);line-height:1.1;margin:12px 0 16px}
-.subtitle{color:var(--muted);font-size:18px}
-.cta{display:flex;gap:12px;margin-top:24px}
-.btn{padding:12px 16px;border-radius:12px;border:1px solid var(--brand);background:#ffffff;color:var(--brand)}
-.btn:hover{box-shadow:var(--ring)}
-.btn.primary{background:var(--brand);border:1px solid var(--brand);color:#ffffff;font-weight:600}
-.btn.ghost{background:transparent;border:1px solid var(--brand);color:var(--brand)}
-.card{background:var(--card);border:1px solid var(--brand);border-radius:16px;padding:18px}
-.grid{display:grid;gap:16px}
-.grid.projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-.kpi{padding:14px;border:1px dashed var(--brand);border-radius:12px;color:var(--muted)}
-section{padding:12px 0 28px}
-h2{font-size:22px;margin:0 0 12px}
-.project h3{margin:8px 0 4px;font-size:18px}
-.project p{margin:0;color:var(--muted);font-size:14px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.tag{font-size:12px;color:#0b1220;background:rgba(93,172,195,.15);border:1px solid rgba(93,172,195,.25);padding:4px 8px;border-radius:999px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;font-weight:800;color:#0b1220}
-.list{margin:0;padding-left:18px;color:var(--muted)}
-footer{padding:24px 0;color:var(--muted);border-top:1px solid var(--brand);margin-top:24px}
-.social{display:flex;gap:12px}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#ffffff;border:1px solid var(--brand);color:var(--brand)}
-.contact{display:grid;grid-template-columns:1fr .8fr;gap:16px;align-items:start}
-input,textarea{width:100%;padding:12px 14px;background:#ffffff;border:1px solid var(--brand);border-radius:12px;color:var(--text)}
-label{font-size:12px;color:var(--muted)}
-form .row{display:grid;gap:10px}
-@media (max-width:900px){.hero{grid-template-columns:1fr}.about,.contact{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CW | Portfólio</title>
+  <meta name="description" content="Portfólio de Conception (CW) — projetos, artigos e contato." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* ----------------------
+       Tema & Tokens
+    ---------------------- */
+    :root{
+      --bg: #0a1420;              /* fundo base escuro */
+      --bg-2: #0b1926;            /* variação para gradientes */
+      --surface: #0f1b2b;         /* cartões */
+      --text: #e6edf3;            /* texto principal */
+      --muted: #9fb3c8;           /* texto secundário */
+      --primary: #5DACC3;         /* azul pedido */
+      --primary-2: #2a7f96;       /* azul mais escuro */
+      --ring: 0 0 0 4px rgba(93,172,195,.25);
+      --radius: 16px;
+      --shadow-lg: 0 10px 30px rgba(0,0,0,.45);
+      --shadow-md: 0 6px 18px rgba(0,0,0,.35);
+      --border: rgba(93,172,195,.25);
+      --border-soft: rgba(255,255,255,.06);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;height:100%}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      color:var(--text);
+      line-height:1.6;
+      background:
+        radial-gradient(1200px 800px at 85% -10%, rgba(93,172,195,.20), transparent),
+        radial-gradient(900px 600px at -10% 20%, rgba(93,172,195,.14), transparent),
+        linear-gradient(180deg, var(--bg), var(--bg-2));
+      position:relative;
+      overflow-x:hidden;
+    }
+
+    /* textura/ruído sutil */
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;mix-blend-mode:soft-light;
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="120" height="120" filter="url(%23n)" opacity="0.35"/></svg>');
+      background-size:120px 120px;
+    }
+
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .container{max-width:1200px;margin:0 auto;padding:24px}
+
+    /* ----------------------
+       Navegação
+    ---------------------- */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(10,20,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-soft)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px}
+    .brand{font-weight:800;letter-spacing:.4px}
+    .brand span{color:var(--primary)}
+    .menu{display:flex;gap:18px}
+    .menu a{color:#c9d6e2}
+    .menu a:hover{color:#fff}
+
+    /* ----------------------
+       Hero
+    ---------------------- */
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:56px 0 32px}
+    .metrics{display:flex;gap:14px;margin-bottom:18px}
+    .pill{display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(255,255,255,.03);border:1px solid var(--border-soft);border-radius:999px;color:#c9d6e2}
+    .title{font-size:clamp(34px,6.2vw,64px);line-height:1.12;margin:10px 0 16px}
+    .title strong{display:block}
+    .subtitle{color:var(--muted);font-size:18px;max-width:58ch}
+    .cta{display:flex;gap:12px;margin-top:28px}
+    .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.02);color:#dbe7ef;box-shadow:var(--shadow-md);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:rgba(93,172,195,.6)}
+    .btn.primary{background:linear-gradient(135deg, var(--primary), #76bfd2);border:none;color:#0b1220;font-weight:700}
+    .btn.primary::after{content:"";position:absolute;inset:-1px;border-radius:12px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transform:translateX(-120%);transition:transform .6s ease}
+    .btn.primary:hover::after{transform:translateX(120%)}
+
+    .hero-art{position:relative;min-height:360px;display:grid;place-items:center}
+    .pad{width:min(380px,80%);aspect-ratio:1;border-radius:28px;background:radial-gradient(52% 52% at 50% 50%, rgba(93,172,195,.2), rgba(93,172,195,.06) 60%, transparent 70%), linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.01));border:1px solid var(--border);box-shadow:inset 0 0 0 1px rgba(255,255,255,.05), 0 25px 60px rgba(0,0,0,.45);position:relative;overflow:hidden}
+    .pad::before{content:"";position:absolute;inset:-2px;border-radius:28px;padding:2px;background:conic-gradient(from 0deg, rgba(93,172,195,.0), rgba(93,172,195,.6), rgba(93,172,195,.0));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite: xor;mask-composite: exclude;animation:spin 8s linear infinite}
+    .pad svg{width:60%;height:auto;opacity:.9;filter:drop-shadow(0 10px 30px rgba(93,172,195,.35))}
+
+    @keyframes spin{to{transform:rotate(1turn)}}
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+    .scroll-indicator{display:grid;place-items:center;margin-top:28px}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--primary);animation:bounce 1.8s infinite ease-in-out}
+    @keyframes bounce{0%,100%{transform:translateY(0);opacity:.75}50%{transform:translateY(10px);opacity:1}}
+
+    /* ----------------------
+       Seções & Cards
+    ---------------------- */
+    section{padding:36px 0 56px}
+    h2{font-size:clamp(22px,3.4vw,34px);margin:0 0 18px;color:#dbe7ef}
+
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:960px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}.grid.cols-2{grid-template-columns:1fr}}
+    @media (max-width:640px){.grid.cols-3{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--border-soft);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-md);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.5);border-color:rgba(93,172,195,.45)}
+
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--border-soft);border-radius:999px;color:#c9d6e2;background:rgba(255,255,255,.02)}
+    .muted{color:var(--muted)}
+
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+
+    .project-cover{border-radius:14px;height:180px;background:radial-gradient(circle at 30% 20%, rgba(93,172,195,.35), transparent 60%),linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid var(--border-soft);box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);margin-bottom:12px}
+    .project h3{margin:8px 0 4px;font-size:18px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .actions{display:flex;gap:10px;margin-top:12px}
+
+    /* forms & footer */
+    .contact-grid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+    @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+    input,textarea{width:100%;padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid var(--border-soft);border-radius:12px;color:var(--text)}
+
+    footer{padding:28px 0;color:#9fb3c8;border-top:1px solid var(--border-soft);margin-top:24px}
+
+    /* ----------------------
+       Revelações ao rolar
+    ---------------------- */
+    [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    [data-reveal].is-visible{opacity:1;transform:none}
+    [data-reveal][data-delay="100"]{transition-delay:.1s}
+    [data-reveal][data-delay="200"]{transition-delay:.2s}
+    [data-reveal][data-delay="300"]{transition-delay:.3s}
+
+    /* reduz animações quando preferido */
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important;transition:none !important}
+      html{scroll-behavior:auto}
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<header>
-<div class="logo">CW<span style="color:var(--brand)">•</span>Portfolio</div>
-<nav>
-<a href="#projetos">Projetos</a>
-<a href="#sobre">Sobre</a>
-<a href="#contato">Contato</a>
-</nav>
-</header>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">CW<span>•</span>Portfolio</div>
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="home" class="container">
+    <!-- HERO -->
     <section class="hero">
       <div>
-        <div class="badge">👋 Hello! I'm <strong>Conception</strong></div>
-        <h1 class="title">I help and I create some experiências digitais rápidas, acessíveis e bonitas.</h1>
-        <p class="subtitle">Desenvolvedor(a) focado(a) em front‑end moderno, performance e DX. Aqui você encontra meus projetos, artigos e formas de contato.</p>
-        <div class="cta">
-          <a class="btn primary" href="#projetos">Ver Projetos</a>
-          <a class="btn ghost" href="https://github.com/SEU_USUARIO" target="_blank" rel="noreferrer">GitHub</a>
+        <div class="metrics">
+          <div class="pill" data-reveal>⚡ Performance first</div>
+          <div class="pill" data-reveal data-delay="100">🧪 DX & Acessibilidade</div>
+          <div class="pill" data-reveal data-delay="200">🛠️ React • TypeScript</div>
         </div>
-        <div class="kpis">
-          <div class="kpi">⚡ <strong>+X</strong> projetos entregues</div>
-          <div class="kpi">🧪 <strong>Core Web Vitals</strong> first</div>
-          <div class="kpi">🛠️ <strong>Stack:</strong> HTML • CSS • JS • React</div>
+        <h1 class="title" data-reveal>
+          <span style="color:var(--primary)">Conception (CW)</span>
+          <strong>Crio experiências digitais limpas e animadas</strong>
+        </h1>
+        <p class="subtitle" data-reveal data-delay="100">Desenvolvedor(a) focado(a) em front‑end moderno, animações suaves e interfaces performáticas. Este portfólio traz projetos selecionados e estudos em UI motion.</p>
+        <div class="cta" data-reveal data-delay="200">
+          <a class="btn primary" href="#projetos">Ver meus projetos</a>
+          <a class="btn" href="https://github.com/SEU_USUARIO" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="scroll-indicator"><div class="dot"></div></div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="pad float" id="pad">
+          <!-- Ícone tipo "gamepad" para lembrar a ref, pode trocar por outro -->
+          <svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M88 152h-8v-8a8 8 0 0 0-16 0v8h-8a8 8 0 0 0 0 16h8v8a8 8 0 0 0 16 0v-8h8a8 8 0 0 0 0-16Z" fill="currentColor"/>
+            <path d="M168 136a12 12 0 1 0 12 12a12 12 0 0 0-12-12Zm32-12a12 12 0 1 0 12 12a12 12 0 0 0-12-12Z" fill="currentColor"/>
+            <path d="M216 72H40A32 32 0 0 0 8 104v48a64.07 64.07 0 0 0 64 64c18.35 0 32.29-9.09 41.55-27a8 8 0 0 1 14.9 0c9.26 17.91 23.2 27 41.55 27a64.07 64.07 0 0 0 64-64v-48A32 32 0 0 0 216 72Zm16 80a48.05 48.05 0 0 1-48 48c-13.69 0-23.19-6-30.68-20.5a24 24 0 0 0-42.66 0C103.19 194 93.69 200 80 200a48.05 48.05 0 0 1-48-48v-48a16 16 0 0 1 16-16h176a16 16 0 0 1 16 16Z" fill="currentColor"/>
+          </svg>
         </div>
       </div>
-      <div class="card">
-        <div style="display:flex;gap:16px;align-items:center">
-          <div class="avatar">CW</div>
-          <div>
-            <div style="font-weight:600">Conception_World (CW)</div>
-            <div style="color:var(--muted);font-size:14px">Desenvolvedor(a) Front‑end</div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <h2 data-reveal>Sobre mim</h2>
+      <div class="grid cols-2">
+        <div class="card" data-reveal>
+          <p>Sou Conception (também conhecido como Conception_World ou CW). Curto construir interfaces elegantes com animações discretas e alta performance. Busco colaborar em produtos com impacto real.</p>
+          <ul class="list">
+            <li>🔭 Foco atual: Web Animations, PWAs, micro‑interações</li>
+            <li>📚 Escrevo sobre: front‑end, produtividade e OSS</li>
+            <li>🌎 Idiomas: pt‑BR, en</li>
+          </ul>
+        </div>
+        <div class="grid cols-3">
+          <div class="card" data-reveal data-delay="100">
+            <div class="badge">⏳ Experiência</div>
+            <h3 style="margin:10px 0 4px">+X anos</h3>
+            <p class="muted">Construindo produtos web escaláveis.</p>
+          </div>
+          <div class="card" data-reveal data-delay="200">
+            <div class="badge">🧠 Linguagens</div>
+            <p class="muted" style="margin-top:10px">TypeScript, JavaScript</p>
+            <p class="muted">CSS, HTML</p>
+          </div>
+          <div class="card" data-reveal data-delay="300">
+            <div class="badge">🧩 Stack</div>
+            <p class="muted" style="margin-top:10px">React, Next.js</p>
+            <p class="muted">Vite, Vitest, Playwright</p>
           </div>
         </div>
-        <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Node</span>
-          <span class="tag">UI/UX</span>
-        </div>
       </div>
     </section>
 
+    <!-- PROJETOS -->
     <section id="projetos">
-      <h2>Projetos em Destaque</h2>
-      <div class="grid projects">
-        <article class="card project">
-          <div class="pill">2025 • Pessoal</div>
+      <h2 data-reveal>Projetos em destaque</h2>
+      <div class="grid cols-3">
+        <article class="card project" data-reveal>
+          <div class="project-cover"></div>
           <h3>Nome do Projeto 1</h3>
-          <p>Breve descrição do projeto, problema resolvido e principais resultados.</p>
-          <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
-          <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Demo</a> · <a href="#" target="_blank" rel="noreferrer">Código</a></p>
+          <p>Breve descrição do problema e resultado alcançado.</p>
+          <div class="actions">
+            <a class="btn primary" href="#">Demo</a>
+            <a class="btn" href="#">Código</a>
+          </div>
         </article>
-        <article class="card project">
-          <div class="pill">2024 • Trabalho</div>
+        <article class="card project" data-reveal data-delay="100">
+          <div class="project-cover"></div>
           <h3>Nome do Projeto 2</h3>
           <p>Resumo do impacto, métricas e tecnologias usadas.</p>
-          <div class="tags"><span class="tag">Next.js</span><span class="tag">Tailwind</span><span class="tag">API</span></div>
-          <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Case</a> · <a href="#" target="_blank" rel="noreferrer">Repositório</a></p>
+          <div class="actions">
+            <a class="btn primary" href="#">Case</a>
+            <a class="btn" href="#">Repositório</a>
+          </div>
         </article>
-        <article class="card project">
-          <div class="pill">2023 • Open Source</div>
+        <article class="card project" data-reveal data-delay="200">
+          <div class="project-cover"></div>
           <h3>Nome do Projeto 3</h3>
           <p>Contribuição em OSS, PRs relevantes e resultados.</p>
-          <div class="tags"><span class="tag">OSS</span><span class="tag">CI/CD</span><span class="tag">Tests</span></div>
-          <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Docs</a> · <a href="#" target="_blank" rel="noreferrer">Repositório</a></p>
+          <div class="actions">
+            <a class="btn primary" href="#">Docs</a>
+            <a class="btn" href="#">Repo</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="sobre" class="about">
-      <div>
-        <h2>Sobre mim</h2>
-        <p>Sou Conception (também conhecido como Conception_World ou CW). Gosto de construir interfaces elegantes e acessíveis, com foco em performance e DX. Busco oportunidades para colaborar em produtos com impacto real.</p>
-        <ul class="list">
-          <li>⚙️ Atualmente estudando: Web Animations, PWAs</li>
-          <li>📚 Escrevo sobre: front‑end, produtividade e OSS</li>
-          <li>🌎 Idiomas: pt‑BR, en</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2 style="margin-top:0">Stack & Ferramentas</h2>
-        <ul class="list">
-          <li>Linguagens: TypeScript, JavaScript</li>
-          <li>Frameworks: React, Next.js</li>
-          <li>Infra: Vite, Vitest, Playwright, GitHub Actions</li>
-          <li>Design: Figma, Tailwind</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contato" class="contact">
-      <div>
-        <h2>Contato</h2>
-        <p>Curtiu o que viu? Vamos conversar.</p>
-        <div class="social" style="margin:12px 0 16px">
-          <a class="pill" href="mailto:email@exemplo.com">✉️ email@exemplo.com</a>
-          <a class="pill" href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank" rel="noreferrer">in/SEU_LINKEDIN</a>
-          <a class="pill" href="https://github.com/SEU_USUARIO" target="_blank" rel="noreferrer">github.com/SEU_USUARIO</a>
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2 data-reveal>Vamos conversar</h2>
+      <div class="contact-grid">
+        <div class="card" data-reveal>
+          <div class="badge">💬 Discord</div>
+          <h3 style="margin:10px 0">seu_discord</h3>
+          <p class="muted">Melhor forma para discutir projetos.</p>
+          <a class="btn" href="#">Abrir no Discord</a>
         </div>
-        <form action="https://formspree.io/f/SEU_FORM_ID" method="POST">
-          <div class="row"><label>Nome</label><input name="name" required></div>
-          <div class="row"><label>Email</label><input type="email" name="email" required></div>
-          <div class="row"><label>Mensagem</label><textarea name="message" rows="5" required></textarea></div>
-          <button class="btn primary" type="submit" style="margin-top:10px">Enviar</button>
-        </form>
-      </div>
-      <div class="card">
-        <h2 style="margin-top:0">Baixar CV</h2>
-        <p>Deixe um link público do seu currículo aqui.</p>
-        <a class="btn" href="#" target="_blank" rel="noreferrer">Abrir PDF</a>
+        <div class="card" data-reveal data-delay="100">
+          <div class="badge">✉️ Email</div>
+          <h3 style="margin:10px 0">email@exemplo.com</h3>
+          <p class="muted">Para propostas e contatos profissionais.</p>
+          <a class="btn primary" href="mailto:email@exemplo.com">Enviar email</a>
+        </div>
       </div>
     </section>
-
-
 
     <footer>
       © <span id="year"></span> Conception_World — Feito com HTML/CSS puro e hospedado no GitHub Pages.
-      </footer>
-      </div>
-      
-      
-      <script>
-      document.getElementById('year').textContent = new Date().getFullYear()
-      </script>
-      </body>
-      </html>
+    </footer>
+  </main>
+
+  <script>
+    // ano do rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // IntersectionObserver para revelar elementos
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((e)=>{
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold: .12});
+    revealEls.forEach(el=> io.observe(el));
+
+    // Parallax leve no bloco do hero (segue o mouse)
+    const pad = document.getElementById('pad');
+    if(pad){
+      const damp = 30; // menor = mais intenso
+      pad.addEventListener('mousemove', (e)=>{
+        const r = pad.getBoundingClientRect();
+        const x = (e.clientX - (r.left + r.width/2)) / r.width;
+        const y = (e.clientY - (r.top + r.height/2)) / r.height;
+        pad.style.transform = `translateY(-4px) rotateX(${ -y * damp }deg) rotateY(${ x * damp }deg)`;
+      });
+      pad.addEventListener('mouseleave', ()=>{
+        pad.style.transform = '';
+      });
+    }
+  </script>
+</body>
+</html>
