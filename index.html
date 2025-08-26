@@ -10,12 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0b0f17; --card: #111827; --muted: #94a3b8; --text: #e5e7eb; --brand: #5dacc3; --accent: #ffffff;
-      --ring: 0 0 0 3px rgba(93,172,195,.25);
+      --bg: #0b0f17; --card: #111827; --muted: #94a3b8; --text: #e5e7eb; --brand: #22d3ee; --accent:#8b5cf6;
+      --ring: 0 0 0 3px rgba(34,211,238,.25);
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 800px at 80% -10%,rgba(93,172,195,.35),transparent),radial-gradient(900px 600px at -10% 10%,rgba(255,255,255,.12),transparent),var(--bg);color:var(--text);line-height:1.6}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:radial-gradient(1200px 800px at 80% -10%,rgba(139,92,246,.15),transparent),radial-gradient(900px 600px at -10% 10%,rgba(34,211,238,.15),transparent),var(--bg);color:var(--text);line-height:1.6}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:24px}
@@ -30,7 +30,7 @@
     .cta{display:flex;gap:12px;margin-top:24px}
     .btn{padding:12px 16px;border-radius:12px;border:1px solid #1f2937;background:#0f172a;color:#e5e7eb}
     .btn:hover{box-shadow:var(--ring)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));border:none;color:#0b1220;font-weight:600}
+    .btn.primary{background: linear-gradient(135deg, var(--brand), var(--accent)); border: none; color: #0b1220;}
     .btn.ghost{background:transparent}
     .card{background:linear-gradient(180deg,#0b1220, #0b1220), var(--card);border:1px solid #1f2937;border-radius:16px;padding:18px}
     .grid{display:grid;gap:16px}
@@ -42,7 +42,7 @@
     .project h3{margin:8px 0 4px;font-size:18px}
     .project p{margin:0;color:var(--muted);font-size:14px}
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{font-size:12px;color:#0b1220;background:rgba(93,172,195,.15);border:1px solid rgba(93,172,195,.25);padding:4px 8px;border-radius:999px}
+    .tag{font-size:12px; color:#0b1220; background: rgba(93,172,195,.15); border: 1px solid rgba(93,172,195,.35); padding:4px 8px; border-radius:999px;}
     .about{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;font-weight:800;color:#0b1220}
     .list{margin:0;padding-left:18px;color:var(--muted)}
@@ -66,6 +66,110 @@
         <a href="#contato">Contato</a>
       </nav>
     </header>
+
+    <section class="hero">
+      <div>
+        <div class="badge">👋 Olá! Eu sou <strong>Conception</strong></div>
+        <h1 class="title">Crio experiências digitais rápidas, acessíveis e bonitas.</h1>
+        <p class="subtitle">Desenvolvedor(a) focado(a) em front‑end moderno, performance e DX. Aqui você encontra meus projetos, artigos e formas de contato.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projetos">Ver Projetos</a>
+          <a class="btn ghost" href="https://github.com/SEU_USUARIO" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi">⚡ <strong>+X</strong> projetos entregues</div>
+          <div class="kpi">🧪 <strong>Core Web Vitals</strong> first</div>
+          <div class="kpi">🛠️ <strong>Stack:</strong> HTML • CSS • JS • React</div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex;gap:16px;align-items:center">
+          <div class="avatar">CW</div>
+          <div>
+            <div style="font-weight:600">Conception_World (CW)</div>
+            <div style="color:var(--muted);font-size:14px">Desenvolvedor(a) Front‑end</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Node</span>
+          <span class="tag">UI/UX</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos em Destaque</h2>
+      <div class="grid projects">
+        <article class="card project">
+          <div class="pill">2025 • Pessoal</div>
+          <h3>Nome do Projeto 1</h3>
+          <p>Breve descrição do projeto, problema resolvido e principais resultados.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Vercel</span></div>
+          <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Demo</a> · <a href="#" target="_blank" rel="noreferrer">Código</a></p>
+        </article>
+        <article class="card project">
+          <div class="pill">2024 • Trabalho</div>
+          <h3>Nome do Projeto 2</h3>
+          <p>Resumo do impacto, métricas e tecnologias usadas.</p>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">Tailwind</span><span class="tag">API</span></div>
+          <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Case</a> · <a href="#" target="_blank" rel="noreferrer">Repositório</a></p>
+        </article>
+        <article class="card project">
+          <div class="pill">2023 • Open Source</div>
+          <h3>Nome do Projeto 3</h3>
+          <p>Contribuição em OSS, PRs relevantes e resultados.</p>
+          <div class="tags"><span class="tag">OSS</span><span class="tag">CI/CD</span><span class="tag">Tests</span></div>
+          <p style="margin-top:10px"><a href="#" target="_blank" rel="noreferrer">Docs</a> · <a href="#" target="_blank" rel="noreferrer">Repositório</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div>
+        <h2>Sobre mim</h2>
+        <p>Sou Conception (também conhecido como Conception_World ou CW). Gosto de construir interfaces elegantes e acessíveis, com foco em performance e DX. Busco oportunidades para colaborar em produtos com impacto real.</p>
+        <ul class="list">
+          <li>⚙️ Atualmente estudando: Web Animations, PWAs</li>
+          <li>📚 Escrevo sobre: front‑end, produtividade e OSS</li>
+          <li>🌎 Idiomas: pt‑BR, en</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Stack & Ferramentas</h2>
+        <ul class="list">
+          <li>Linguagens: TypeScript, JavaScript</li>
+          <li>Frameworks: React, Next.js</li>
+          <li>Infra: Vite, Vitest, Playwright, GitHub Actions</li>
+          <li>Design: Figma, Tailwind</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div>
+        <h2>Contato</h2>
+        <p>Curtiu o que viu? Vamos conversar.</p>
+        <div class="social" style="margin:12px 0 16px">
+          <a class="pill" href="mailto:email@exemplo.com">✉️ email@exemplo.com</a>
+          <a class="pill" href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank" rel="noreferrer">in/SEU_LINKEDIN</a>
+          <a class="pill" href="https://github.com/SEU_USUARIO" target="_blank" rel="noreferrer">github.com/SEU_USUARIO</a>
+        </div>
+        <form action="https://formspree.io/f/SEU_FORM_ID" method="POST">
+          <div class="row"><label>Nome</label><input name="name" required></div>
+          <div class="row"><label>Email</label><input type="email" name="email" required></div>
+          <div class="row"><label>Mensagem</label><textarea name="message" rows="5" required></textarea></div>
+          <button class="btn primary" type="submit" style="margin-top:10px">Enviar</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Baixar CV</h2>
+        <p>Deixe um link público do seu currículo aqui.</p>
+        <a class="btn" href="#" target="_blank" rel="noreferrer">Abrir PDF</a>
+      </div>
+    </section>
+
     <footer>
       © <span id="year"></span> Conception_World — Feito com HTML/CSS puro e hospedado no GitHub Pages.
     </footer>
